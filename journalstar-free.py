@@ -28,10 +28,6 @@ subscriber_only = tree.xpath('//div[@class="subscriber-only"]/p/text()')
 
 print_trim = tree.xpath('//span[@class="print_trim"]/text()')
 
-print "subscriber-preview: ", subscriber_preview
-print "subscriber-only: ", subscriber_only
-print "print_trim: ", print_trim
-
 f = open("article.html", "w")
 f.write("<html><body>")
 f.write("<title>")
@@ -48,10 +44,6 @@ f.write(repr(print_trim))
 f.write("</p>")
 f.write("</body></html>")
 f.close()
-
-### auto open html file here
-
-
 
 ### References ###
 #https://docs.python-guide.org/scenarios/scrape/
